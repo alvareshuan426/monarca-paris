@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MONARCA.PARIS — аксессуары для волос</title>
+  <meta name="description" content="MONARCA.PARIS — крабы, заколки-бабочки и гребни для волос. Летний Париж, собранный по деталям.">
+  <meta name="theme-color" content="#EBEDEA">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Prata&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/hero/seine-2400.webp" imagesrcset="assets/hero/seine-1400.webp 1400w, assets/hero/seine-2400.webp 2400w" imagesizes="100vw">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#collection">Перейти к коллекции</a>
+
+  <header class="site-header" data-header>
+    <nav class="site-nav" aria-label="Основное меню">
+      <a href="#atelier">Ателье</a>
+      <a href="#collection">Коллекция</a>
+    </nav>
+    <a class="wordmark" href="#atelier" aria-label="MONARCA.PARIS — наверх" data-header-wordmark>MONARCA<span>.PARIS</span></a>
+    <button class="cart-toggle" type="button" data-cart-open aria-haspopup="dialog">
+      Корзина <span class="cart-count" data-cart-count>0</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- Сцена: фото Парижа растворяется, затем заколка собирается по скроллу -->
+    <section class="atelier" id="atelier" data-atelier aria-label="Сборка заколки Bordeaux">
+      <div class="stage">
+        <canvas class="stage-canvas" data-canvas role="img" aria-label="Детали бордовой заколки собираются в воздухе по мере прокрутки"></canvas>
+
+        <!-- Слои: фото → вывеска → вырезанная девушка (вывеска уходит за голову) → текст -->
+        <div class="hero" data-hero>
+          <img class="hero-photo" data-hero-photo
+               src="assets/hero/seine-2400.webp"
+               srcset="assets/hero/seine-1400.webp 1400w, assets/hero/seine-2400.webp 2400w"
+               sizes="100vw" alt="Девушка с бордовым крабом в волосах смотрит на Эйфелеву башню с набережной Сены" fetchpriority="high">
+          <div class="hero-copy" data-hero-copy>
+            <p class="masthead" aria-hidden="true">MONARCA</p>
+            <p class="masthead-sub" aria-hidden="true">Paris</p>
+          </div>
+          <img class="hero-photo hero-cutout" data-hero-cutout
+               src="assets/hero/seine-cutout-2400.webp"
+               srcset="assets/hero/seine-cutout-1400.webp 1400w, assets/hero/seine-cutout-2400.webp 2400w"
+               sizes="100vw" alt="" aria-hidden="true">
+          <div class="hero-text" data-hero-text>
+            <h1>Лето в Париже, собранное по деталям</h1>
+            <p>Глянцевые крабы, заколки-бабочки и гребни — красивые мелочи, с которых начинается настроение.</p>
+            <a class="link-arrow" href="#collection">Смотреть коллекцию</a>
+          </div>
+          <p class="scroll-hint" data-scroll-hint><span>Листайте — заколка соберётся</span></p>
+        </div>
+
+        <div class="captions" data-captions>
+          <div class="captions-progress"><span data-progress></span></div>
+          <ol class="caption-list">
+            <li class="caption" data-step="0">
+              <span class="caption-num">01 / 04</span>
+              <h2>Сначала&nbsp;— детали</h2>
+              <p>Две глянцевые створки, прозрачный шарнир и золотистая пружина парят по отдельности.</p>
+            </li>
+            <li class="caption" data-step="1">
+              <span class="caption-num">02 / 04</span>
+              <h2>Всё сходится</h2>
+              <p>Створки встают на место, пружина садится на ось — ничего лишнего.</p>
+            </li>
+            <li class="caption" data-step="2">
+              <span class="caption-num">03 / 04</span>
+              <h2>Механизм на виду</h2>
+              <p>Прозрачный корпус не прячет пружину: видно, как устроена вещь.</p>
+            </li>
+            <li class="caption caption-product" data-step="3">
+              <span class="caption-num">04 / 04</span>
+              <h2>Bordeaux</h2>
+              <p>Краб для волос глубокого бордового цвета</p>
+              <div class="caption-buy">
+                <span class="price" data-feature-price></span>
+                <button class="btn-buy" type="button" data-add="bordeaux">В корзину</button>
+                <button class="link-quiet" type="button" data-open-product="bordeaux">Подробнее</button>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection" id="collection" aria-labelledby="collection-title">
+      <div class="collection-head">
+        <div>
+          <p class="eyebrow" data-collection-count></p>
+          <h2 id="collection-title">Коллекция</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Категории" data-filters></div>
+      </div>
+      <ul class="grid" data-grid></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-mark">MONARCA<span>.PARIS</span></p>
+    <div class="footer-row">
+      <p>Аксессуары для волос</p>
+      <nav aria-label="Соцсети и контакты">
+        <!-- Замените ссылки на свои -->
+        <a href="#">Instagram</a>
+        <a href="#">Telegram</a>
+        <a href="#">Связаться</a>
+      </nav>
+      <p>© 2026 MONARCA.PARIS</p>
+    </div>
+  </footer>
+
+  <!-- Карточка товара -->
+  <dialog class="product-dialog" data-product-dialog aria-labelledby="pd-title">
+    <div class="pd">
+      <button class="dialog-close" type="button" data-close aria-label="Закрыть">×</button>
+      <div class="pd-gallery">
+        <img class="pd-main" data-pd-main alt="">
+        <div class="pd-thumbs" data-pd-thumbs></div>
+      </div>
+      <div class="pd-info">
+        <p class="eyebrow" data-pd-kind></p>
+        <h2 id="pd-title" data-pd-name></h2>
+        <p class="pd-price price" data-pd-price></p>
+        <p class="pd-desc" data-pd-desc></p>
+        <dl class="pd-specs">
+          <div><dt>Цвет</dt><dd data-pd-colour></dd></div>
+          <div><dt>Категория</dt><dd data-pd-category></dd></div>
+        </dl>
+        <button class="btn-buy btn-wide" type="button" data-pd-add>В корзину</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Корзина и оформление -->
+  <dialog class="cart-dialog" data-cart-dialog aria-labelledby="cart-title">
+    <div class="cart">
+      <div class="cart-head">
+        <h2 id="cart-title" data-cart-title>Корзина</h2>
+        <button class="dialog-close" type="button" data-close aria-label="Закрыть">×</button>
+      </div>
+
+      <div class="cart-view" data-view="items">
+        <ul class="cart-items" data-cart-items></ul>
+        <p class="cart-empty" data-cart-empty>В корзине пока пусто. <a href="#collection" data-close>Выбрать заколку</a></p>
+        <div class="cart-foot" data-cart-foot>
+          <p class="cart-total"><span>Итого</span><span class="price" data-cart-total></span></p>
+          <button class="btn-buy btn-wide" type="button" data-checkout>Оформить заказ</button>
+        </div>
+      </div>
+
+      <form class="cart-view checkout" data-view="checkout" data-checkout-form hidden novalidate>
+        <p class="checkout-note">Оставьте контакты — мы подтвердим наличие и детали доставки.</p>
+        <label for="co-name">Имя
+          <input id="co-name" name="name" autocomplete="name" required>
+        </label>
+        <label for="co-phone">Телефон
+          <input id="co-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 ___ ___-__-__" required>
+        </label>
+        <label for="co-address">Город и адрес доставки
+          <input id="co-address" name="address" autocomplete="street-address">
+        </label>
+        <label for="co-comment">Комментарий
+          <textarea id="co-comment" name="comment" rows="3"></textarea>
+        </label>
+        <p class="form-error" data-form-error role="alert" hidden>Укажите имя и телефон, чтобы мы могли связаться с вами.</p>
+        <p class="cart-total"><span>К оплате</span><span class="price" data-checkout-total></span></p>
+        <button class="btn-buy btn-wide" type="submit">Отправить заказ</button>
+        <button class="link-quiet" type="button" data-back>Вернуться к корзине</button>
+      </form>
+
+      <div class="cart-view done" data-view="done" hidden>
+        <p class="done-title">Спасибо!</p>
+        <p data-done-text></p>
+        <button class="btn-outline btn-wide" type="button" data-close>Продолжить покупки</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
